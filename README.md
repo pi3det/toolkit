@@ -23,7 +23,10 @@
       <img src="https://img.shields.io/badge/Paper-%F0%9F%93%96-darkred">
     </a>&nbsp;
     <a href="http://pi3det.github.io/" target='_blank'>
-      <img src="https://img.shields.io/badge/Project-%F0%9F%94%97-orange">
+      <img src="https://img.shields.io/badge/Project-%F0%9F%94%97-blue">
+    </a>&nbsp;
+    <a href="https://huggingface.co/datasets/Pi3DET/data" target='_blank'>
+      <img src="https://img.shields.io/badge/Dataset-%F0%9F%94%97-green">
     </a>&nbsp;
     <a href="" target='_blank'>
       <img src="https://visitor-badge.laobi.icu/badge?page_id=pi3det.Pi3EDT">
@@ -33,8 +36,6 @@
 | <img src="https://robosense2025.github.io/images/track5/teaser.png" alt="Teaser" width="100%"> |
 | :-: |
 
-With the rise of robotics, LiDAR‑based 3D object detection has garnered significant attention in both academia and industry. However, existing datasets and methods predominantly focus on vehicle‑mounted platforms, leaving other autonomous platforms underexplored. To bridge this gap, we introduce **Pi3DET**, the first benchmark featuring LiDAR data and 3D bounding‑box annotations collected from multiple platforms: vehicle, quadruped, and drone. This facilitates research in 3D object detection for non‑vehicle platforms as well as cross‑platform 3D detection. Based on Pi3DET, we propose a novel cross‑platform adaptation framework that transfers knowledge from the well‑studied vehicle platform to other platforms. This framework achieves perspective‑invariant 3D detection through robust alignment at both geometric and feature levels. Additionally, we establish a benchmark to evaluate the resilience and robustness of current 3D detectors in cross‑platform scenarios, providing valuable insights for developing adaptive 3D perception systems. Extensive experiments validate the effectiveness of our approach on challenging cross‑platform tasks, demonstrating substantial gains over existing adaptation methods.
-We hope this work paves the way for generalizable and unified 3D perception systems across diverse and complex environments. Our Pi3DET dataset, cross‑platform benchmark suite, and annotation toolkit have been made publicly available.
 
 ## Updates
 - **[07/2025]** - The **Pi3DET** dataset has been extended to <strong>Track 5: Cross-Platform 3D Object Detection</strong> of the <a href="https://robosense2025.github.io/" target="_blank" rel="noopener noreferrer"><strong><u>RoboSense Challenge</u></strong></a> at <a href="https://www.iros25.org/" target="_blank" rel="noopener noreferrer"><strong><u>IROS 2025</u></strong></a>. See the <a href="https://robosense2025.github.io/track5" target="_blank" rel="noopener noreferrer">track homepage</a>, <a href="https://github.com/robosense2025/track5" target="_blank" rel="noopener noreferrer">GitHub repo</a> for more details.
