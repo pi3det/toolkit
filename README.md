@@ -33,7 +33,7 @@
     </a>
   </p>
 
-| <img src="https://robosense2025.github.io/images/track5/teaser.png" alt="Teaser" width="100%"> |
+| <img src="./images/teaser.png" alt="Teaser" width="100%"> |
 | :-: |
 
 
@@ -80,7 +80,7 @@ To be updated.
 ## :triangular_ruler: Pi3DET Benchmark
 ### Statistical Analysis
 
-| <img src="images/distributions.png" alt="Teaser" width="100%">|
+| <img src="./images/distributions.png" alt="Distribution" width="100%">|
 | :-: |
 
 We observe significant cross-platform geometric discrepancies in ego‑motion jitter, point‑cloud elevation distributions, and target pitch‑angle distributions across vehicle, quadruped, and drone platforms, which hinder single‑platform model generalization.
@@ -88,7 +88,7 @@ We observe significant cross-platform geometric discrepancies in ego‑motion ji
 
 ### Methodology
 
-| <img src="images/framework.png" alt="Teaser" width="100%"> |
+| <img src="./images/framework.png" alt="Framework" width="100%"> |
 | :-: |
 
 Pi3DET‑Net employs a two‑stage adaptation pipeline—Pre‑Adaptation uses random jitter and virtual poses to learn and align global geometric transformations, while Knowledge Adaptation leverages geometry‑aware descriptors and KL‑based probabilistic feature alignment to synchronize feature distributions across platforms.  
@@ -130,9 +130,12 @@ Pi3DET‑Net employs a two‑stage adaptation pipeline—Pre‑Adaptation uses r
 
 
 ### Dataset Examples
-<img src="https://robosense2025.github.io/images/track5/data_example1.png" alt="Teaser" width="100%">
-<img src="https://robosense2025.github.io/images/track5/data_example2.png" alt="Teaser" width="100%">
-<img src="https://robosense2025.github.io/images/track5/data_example3.png" alt="Teaser" width="100%">
+
+| <img src="./images/example1.png" alt="Examples" width="100%"> |
+| :-: |
+
+| <img src="./images/example2.png" alt="Examples" width="100%"> |
+| :-: |
 
 
 
