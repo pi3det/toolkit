@@ -61,8 +61,16 @@ Pi3DET‑Net employs a two‑stage adaptation pipeline—Pre‑Adaptation uses r
 ## Todo
 > Since the Pi3DET dataset is being used for **Track 5: Cross-Platform 3D Object Detection** of the [**_RoboSense Challenge_**](https://robosense2025.github.io/) at [**_IROS 2025_**](https://www.iros25.org/), in the interest of fairness we are temporarily not releasing all of the data and annotations. If you’re interested, we have open‑sourced a subset of the data and code—please refer to the track details for more information.
 
-- [ ] Release dataset.
-- [ ] Release code.
+- [x] Release dataset for challenge.
+- [x] Release code for challenge.
+- [ ] Release whole dataset of Pi3DET.
+- [ ] Release Pi3DET-Net method.
+
+## Getting Started
+### Data Preparation
+Refer [HuggingFace](https://huggingface.co/datasets/Pi3DET/data) for more details.
+### Training
+Refer [Track5](https://github.com/robosense2025/track5) for more details.
 
 ## Pi3DET Dataset
 ### Detailed statistic information
