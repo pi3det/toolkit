@@ -4,9 +4,9 @@
 <p align="center">
   <img src="images/pi3det.gif" width="12.5%" align="center">
 
-  <h2 align="center">
+  <h1 align="center">
     <strong>Perspective-Invariant 3D Object Detection</strong>
-  </h2>
+  </h1>
 
   <p align="center">
     <a href="https://alanliang.vercel.app/" target="_blank">Ao Liang</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -30,46 +30,67 @@
     </a>
   </p>
 
-
-<img src="https://robosense2025.github.io/images/track5/teaser.png" alt="Teaser" width="100%">
+| <img src="https://robosense2025.github.io/images/track5/teaser.png" alt="Teaser" width="100%"> |
+| :-: |
 
 With the rise of robotics, LiDAR‑based 3D object detection has garnered significant attention in both academia and industry. However, existing datasets and methods predominantly focus on vehicle‑mounted platforms, leaving other autonomous platforms underexplored. To bridge this gap, we introduce **Pi3DET**, the first benchmark featuring LiDAR data and 3D bounding‑box annotations collected from multiple platforms: vehicle, quadruped, and drone. This facilitates research in 3D object detection for non‑vehicle platforms as well as cross‑platform 3D detection. Based on Pi3DET, we propose a novel cross‑platform adaptation framework that transfers knowledge from the well‑studied vehicle platform to other platforms. This framework achieves perspective‑invariant 3D detection through robust alignment at both geometric and feature levels. Additionally, we establish a benchmark to evaluate the resilience and robustness of current 3D detectors in cross‑platform scenarios, providing valuable insights for developing adaptive 3D perception systems. Extensive experiments validate the effectiveness of our approach on challenging cross‑platform tasks, demonstrating substantial gains over existing adaptation methods.
 We hope this work paves the way for generalizable and unified 3D perception systems across diverse and complex environments. Our Pi3DET dataset, cross‑platform benchmark suite, and annotation toolkit have been made publicly available.
 
+## Updates
+- **[07/2025]** - The **Pi3DET** dataset has been extended to <strong>Track 5: Cross-Platform 3D Object Detection</strong> of the <a href="https://robosense2025.github.io/" target="_blank" rel="noopener noreferrer"><strong><u>RoboSense Challenge</u></strong></a> at <a href="https://www.iros25.org/" target="_blank" rel="noopener noreferrer"><strong><u>IROS 2025</u></strong></a>. See the <a href="https://robosense2025.github.io/track5" target="_blank" rel="noopener noreferrer">track homepage</a>, <a href="https://github.com/robosense2025/track5" target="_blank" rel="noopener noreferrer">GitHub repo</a> for more details.
+- **[07/2025]** - The [project page]() is online. :rocket:
+- **[07/2025]** - This work has been accepted to [ICCV 2025](https://iccv.thecvf.com/Conferences/2025). See you in Honolulu! :tada:
 
-# Overview
-### Analyse
-<img src="images/distributions.png" alt="Teaser" width="100%">
+
+
+## Outline
+
+- [Installation](#gear-installation)
+- [Data Preparation](#hotsprings-data-preparation)
+- [Getting Started](#rocket-getting-started)
+- [Model Zoo](#snake-model-zoo)
+- [Pi3DET Benchmark](#triangular_ruler-pi3det-benchmark)
+- [TODO List](#memo-todo-list)
+- [Citation](#citation)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+
+
+## :gear: Installation
+For details related to installation and environment setups, kindly refer to [INSTALL.md](docs/INSTALL.md).
+
+
+
+## :hotsprings: Data Preparation
+Kindly refer to [this](https://huggingface.co/datasets/Pi3DET/data) HuggingFace Dataset page for more details.
+
+
+
+## :rocket: Getting Started
+To learn more usage of this codebase, kindly refer to [GET_STARTED.md](docs/GET_STARTED.md).
+
+
+
+## :snake: Model Zoo
+To be updated.
+
+
+## :triangular_ruler: Pi3DET Benchmark
+### Statistical Analysis
+
+| <img src="images/distributions.png" alt="Teaser" width="100%">|
+| :-: |
+
 We observe significant cross-platform geometric discrepancies in ego‑motion jitter, point‑cloud elevation distributions, and target pitch‑angle distributions across vehicle, quadruped, and drone platforms, which hinder single‑platform model generalization.
-<br />
-<br />
-<br />
 
 
 ### Methodology
-<img src="images/framework.png" alt="Teaser" width="100%">
+
+| <img src="images/framework.png" alt="Teaser" width="100%"> |
+| :-: |
+
 Pi3DET‑Net employs a two‑stage adaptation pipeline—Pre‑Adaptation uses random jitter and virtual poses to learn and align global geometric transformations, while Knowledge Adaptation leverages geometry‑aware descriptors and KL‑based probabilistic feature alignment to synchronize feature distributions across platforms.  
-
-
-## Updates
-- **[July 2025]**: Project page released.
-- **[June 2025]**: **Pi3DET** has been extended to <strong>Track 5: Cross-Platform 3D Object Detection</strong> of the <a href="https://robosense2025.github.io/" target="_blank" rel="noopener noreferrer"><strong><u>RoboSense Challenge</u></strong></a> at <a href="https://www.iros25.org/" target="_blank" rel="noopener noreferrer"><strong><u>IROS 2025</u></strong></a>. See the <a href="https://robosense2025.github.io/track5" target="_blank" rel="noopener noreferrer"><strong><u>track homepage</u></strong></a>, <a href="https://github.com/robosense2025/track5" target="_blank" rel="noopener noreferrer"><strong><u>GitHub repo</u></strong></a> for more details.
-
-
-## TODO
-> Since the Pi3DET dataset is being used for **Track 5: Cross-Platform 3D Object Detection** of the [**_RoboSense Challenge_**](https://robosense2025.github.io/) at [**_IROS 2025_**](https://www.iros25.org/), in the interest of fairness, we are temporarily not releasing all of the data and annotations. If you’re interested, we have open‑sourced a subset of the data and code—please refer to the track details for more information.
-
-- [x] Release dataset for challenge.
-- [x] Release code for challenge.
-- [ ] Release the  whole dataset of Pi3DET.
-- [ ] Release Pi3DET-Net method.
-
-
-## Getting Started
-### Data Preparation
-Refer [HuggingFace](https://huggingface.co/datasets/Pi3DET/data) for more details.
-### Training
-Refer [Track5](https://github.com/robosense2025/track5) for more details.
 
 
 ## Pi3DET Dataset
@@ -106,7 +127,44 @@ Refer [Track5](https://github.com/robosense2025/track5) for more details.
 |                             |                | **Summary (Quadruped)**|     12,300  |          156.75 |        5,982  |          14,551 |
 | **All Three Platforms (25)**|                | **Summary (All)**      |     51,545  |          563.17 |      152,427  |         104,809 |
 
-### Examples
+
+### Dataset Examples
 <img src="https://robosense2025.github.io/images/track5/data_example1.png" alt="Teaser" width="100%">
 <img src="https://robosense2025.github.io/images/track5/data_example2.png" alt="Teaser" width="100%">
 <img src="https://robosense2025.github.io/images/track5/data_example3.png" alt="Teaser" width="100%">
+
+
+
+## :memo: TODO List
+- [x] Initial release. 🚀
+- [x] Release the dataset for the RoboSense Challenge 2025.
+- [x] Release the code for the RoboSense Challenge 2025.
+- [ ] Release the whole Pi3DET dataset.
+- [ ] Release the code for the Pi3DET-Net method.
+
+
+## Citation
+If you find this work helpful for your research, please kindly consider citing our papers:
+
+```bibtex
+@inproceedings{liang2025pi3det,
+    title     = {Perspective-Invariant 3D Object Detection},
+    author    = {Ao Liang and Lingdong Kong and Dongyue Lu and Youquan Liu and Jian Fang and Huaici Zhao and Wei Tsang Ooi},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+    year      = {2025},
+}
+```
+
+
+## License
+This work is under the <a rel="license" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>, while some specific implementations in this codebase might be with other licenses. Kindly refer to [LICENSE.md](docs/LICENSE.md) for a more careful check, if you are using our code for commercial matters.
+
+
+
+## Acknowledgements
+This work is developed based on the [MMDetection3D](https://github.com/open-mmlab/mmdetection3d) codebase.
+
+> <img src="https://github.com/open-mmlab/mmdetection3d/blob/main/resources/mmdet3d-logo.png" width="31%"/><br>
+> MMDetection3D is an open-source toolbox based on PyTorch, towards the next-generation platform for general 3D perception. It is a part of the OpenMMLab project developed by MMLab.
+
+Part of the benchmarked models are from the [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) and [3DTrans](https://github.com/PJLab-ADG/3DTrans) projects.
