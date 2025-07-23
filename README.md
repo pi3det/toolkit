@@ -36,11 +36,29 @@
 | <img src="./images/teaser.png" alt="Teaser" width="100%"> |
 | :-: |
 
+This work focuses on the practical yet challenging task of 3D object detection from heterogeneous robot platforms: **Vehicle**, **Drone**, and **Quadruped**. To achieve strong generalization ability, we contribute: 
+- The **first** dataset for **multi-platform 3D object detection**, comprising more than **51,000+** LiDAR frames with over **250,000+** meticulously annotated 3D bounding boxes.
+- A **cross-platform 3D domain adaptation** framework, effectively transferring capabilities from vehicles to other platforms by integrating geometric and feature-level representations.
+- A comprehensive benchmark study of **state-of-the-art 3D object detectors** on cross-platform scenarios.
+
+
+### :books: Citation
+If you find this work helpful for your research, please kindly consider citing our papers:
+
+```bibtex
+@inproceedings{liang2025pi3det,
+    title     = {Perspective-Invariant 3D Object Detection},
+    author    = {Ao Liang and Lingdong Kong and Dongyue Lu and Youquan Liu and Jian Fang and Huaici Zhao and Wei Tsang Ooi},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+    year      = {2025},
+}
+```
+
 
 ## Updates
-- **[07/2025]** - The **Pi3DET** dataset has been extended to <strong>Track 5: Cross-Platform 3D Object Detection</strong> of the <a href="https://robosense2025.github.io/" target="_blank">RoboSense Challenge</a> at <a href="https://www.iros25.org/" target="_blank">IROS 2025</a>. See the <a href="https://robosense2025.github.io/track5" target="_blank" rel="noopener noreferrer">track homepage</a>, <a href="https://github.com/robosense2025/track5" target="_blank" rel="noopener noreferrer">GitHub repo</a> for more details.
-- **[07/2025]** - The [project page]() is online. :rocket:
-- **[07/2025]** - This work has been accepted to [ICCV 2025](https://iccv.thecvf.com/Conferences/2025). See you in Honolulu! :tada:
+- **[07/2025]** - The **Pi3DET** dataset has been extended to <strong>Track 5: Cross-Platform 3D Object Detection</strong> of the <a href="https://robosense2025.github.io/" target="_blank">RoboSense Challenge</a> at <a href="https://www.iros25.org/" target="_blank">IROS 2025</a>. See the <a href="https://robosense2025.github.io/track5" target="_blank" rel="noopener noreferrer">track homepage</a> and <a href="https://github.com/robosense2025/track5" target="_blank" rel="noopener noreferrer">GitHub repo</a> for more details.
+- **[07/2025]** - The [project page](https://pi3det.github.io/) is online. :rocket:
+- **[07/2025]** - This work has been accepted to [ICCV 2025](https://iccv.thecvf.com/Conferences/2025). See you in Honolulu! 🌸
 
 
 
@@ -52,7 +70,6 @@
 - [Model Zoo](#snake-model-zoo)
 - [Pi3DET Benchmark](#triangular_ruler-pi3det-benchmark)
 - [TODO List](#memo-todo-list)
-- [Citation](#citation)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -64,7 +81,7 @@ For details related to installation and environment setups, kindly refer to [INS
 
 
 ## :hotsprings: Data Preparation
-Kindly refer to [this](https://huggingface.co/datasets/Pi3DET/data) HuggingFace Dataset page for more details.
+Kindly refer to our **HuggingFace Dataset** :hugs: page from [here](https://huggingface.co/datasets/Pi3DET/data) for more details.
 
 
 
@@ -106,27 +123,28 @@ Pi3DET‑Net employs a two‑stage adaptation pipeline—Pre‑Adaptation uses r
 |                             |                | penno_big_loop         |      3,291  |           38.04 |        8,068  |             106 |
 |                             |                | rittenhouse            |      4,135  |           52.68 |       11,103  |          14,315 |
 |                             |                | ucity_small_loop       |      5,133  |           53.32 |       18,251  |           8,639 |
-|                             |                | **Summary (Vehicle)**  |     32,193  |          346.95 |      131,911  |          88,986 |
+|                             |                | **Summary (Vehicle)**  | **32,193**  |      **346.95** |  **131,911**  |      **88,986** |
 | **Drone (7)**               | **Daytime (4)**| penno_parking_1        |      1,125  |            8.69 |        6,075  |             115 |
 |                             |                | penno_parking_2        |      1,086  |            8.55 |        5,896  |             340 |
 |                             |                | penno_plaza            |        678  |            5.60 |          721  |              65 |
 |                             |                | penno_trees            |      1,319  |           11.58 |          657  |             160 |
 |                             | **Nighttime (3)**| high_beams           |        674  |            5.51 |          578  |             211 |
 |                             |                | penno_parking_1        |      1,030  |            9.42 |          524  |             151 |
-|                             |                | penno_parking_2        |      1,140  |           10.12 |           83   |             230 |
-|                             |                | **Summary (Drone)**    |      7,052  |           59.47 |       14,534  |           1,272 |
-| **Quadruped (10)**          | **Daytime (8)**| art_plaza_loop         |      1,446  |           14.90 |            0   |           3,579 |
+|                             |                | penno_parking_2        |      1,140  |           10.12 |          83   |             230 |
+|                             |                | **Summary (Drone)**    |  **7,052**  |       **59.47** |   **14,534**  |       **1,272** |
+| **Quadruped (10)**          | **Daytime (8)**| art_plaza_loop         |      1,446  |           14.90 |           0   |           3,579 |
 |                             |                | penno_short_loop       |      1,176  |           14.68 |        3,532  |              89 |
-|                             |                | rocky_steps            |      1,535  |           14.42 |            0   |           5,739 |
-|                             |                | skatepark_1            |        661  |           12.21 |            0   |             893 |
-|                             |                | skatepark_2            |        921  |            8.47 |            0   |             916 |
+|                             |                | rocky_steps            |      1,535  |           14.42 |           0   |           5,739 |
+|                             |                | skatepark_1            |        661  |           12.21 |           0   |             893 |
+|                             |                | skatepark_2            |        921  |            8.47 |           0   |             916 |
 |                             |                | srt_green_loop         |        639  |            9.23 |        1,349  |             285 |
-|                             |                | srt_under_bridge_1     |      2,033  |           28.95 |            0   |           1,432 |
-|                             |                | srt_under_bridge_2     |      1,813  |           25.85 |            0   |           1,463 |
+|                             |                | srt_under_bridge_1     |      2,033  |           28.95 |           0   |           1,432 |
+|                             |                | srt_under_bridge_2     |      1,813  |           25.85 |           0   |           1,463 |
 |                             | **Nighttime (2)**| penno_plaza_lights   |        755  |           11.25 |          197  |              52 |
 |                             |                | penno_short_loop       |      1,321  |           16.79 |          904  |             103 |
-|                             |                | **Summary (Quadruped)**|     12,300  |          156.75 |        5,982  |          14,551 |
-| **All Three Platforms (25)**|                | **Summary (All)**      |     51,545  |          563.17 |      152,427  |         104,809 |
+|                             |                | **Summary (Quadruped)**| **12,300**  |      **156.75** |    **5,982**  |      **14,551** |
+| **All Three Platforms (25)**|                | **Summary (All)**      | **51,545**  |      **563.17** |  **152,427**  |     **104,809** |
+
 
 
 ### Dataset Examples
@@ -146,18 +164,6 @@ Pi3DET‑Net employs a two‑stage adaptation pipeline—Pre‑Adaptation uses r
 - [ ] Release the whole Pi3DET dataset.
 - [ ] Release the code for the Pi3DET-Net method.
 
-
-## Citation
-If you find this work helpful for your research, please kindly consider citing our papers:
-
-```bibtex
-@inproceedings{liang2025pi3det,
-    title     = {Perspective-Invariant 3D Object Detection},
-    author    = {Ao Liang and Lingdong Kong and Dongyue Lu and Youquan Liu and Jian Fang and Huaici Zhao and Wei Tsang Ooi},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
-    year      = {2025},
-}
-```
 
 
 ## License
