@@ -19,7 +19,7 @@
   </p>
 
   <p align="center">
-    <a href="" target='_blank'>
+    <a href="https://arxiv.org/abs/2507.17665" target='_blank'>
       <img src="https://img.shields.io/badge/Paper-%F0%9F%93%96-darkred">
     </a>&nbsp;
     <a href="http://pi3det.github.io/" target='_blank'>
