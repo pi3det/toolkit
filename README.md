@@ -43,7 +43,7 @@ This work focuses on the practical yet challenging task of 3D object detection f
 
 
 ### :books: Citation
-If you find this work helpful for your research, please kindly consider citing our papers:
+If you find this work helpful for your research, please kindly consider citing our paper:
 
 ```bibtex
 @inproceedings{liang2025pi3det,
